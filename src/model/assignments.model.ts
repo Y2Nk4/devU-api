@@ -12,10 +12,12 @@ import {
 } from 'typeorm'
 
 import CourseModel from './courses.model'
+import GradebookAssignment from './gradebookAssignments.model'
 
 @Entity('assignments')
 export default class Assignment {
   @PrimaryGeneratedColumn()
+  @ManyToOne(() => GradebookAssignment)
   id: number
 
   @Column({ name: 'course_id' })

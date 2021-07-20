@@ -1,8 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm'
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, ManyToOne } from 'typeorm'
+import GradebookAssignment from './gradebookAssignments.model'
 
 @Entity('courses')
 export default class Course {
   @PrimaryGeneratedColumn()
+  @ManyToOne(() => GradebookAssignment)
   id: number
 
   @Column({ length: 128 })
