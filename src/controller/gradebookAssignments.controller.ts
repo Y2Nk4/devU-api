@@ -4,7 +4,7 @@ import GradebookAssignmentService from '../services/gradebookAssignment.service'
 
 import { GenericResponse, NotFound, Updated } from '../utils/apiResponse.utils'
 
-import { serialize } from '../utils/serializer/users.serializer'
+import { serialize } from '../utils/serializer/gradebookAssignments.serializer'
 
 export async function get(req: Request, res: Response, next: NextFunction) {
   try {
